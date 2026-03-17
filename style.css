@@ -54,25 +54,23 @@ body {
   pointer-events: none;
   z-index: 0;
 }
-
+ 
 .deco {
   position: absolute;
-  color: var(--pink-main);
-  line-height: 1;
+  opacity: 3;
+  pointer-events: none;
   user-select: none;
-  animation: float 6s ease-in-out infinite;
+  animation: float 3s ease-in-out infinite;
 }
-
+ 
 .deco:nth-child(odd) {
-  animation-duration: 7s;
-  animation-delay: -2s;
+  animation-duration: 10s;
 }
-
+ 
 .deco:nth-child(3n) {
-  animation-duration: 5s;
-  animation-delay: -1s;
+  animation-duration: 8s;
 }
-
+ 
 @keyframes float {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
   50% { transform: translateY(-8px) rotate(6deg); }
