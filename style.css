@@ -1,0 +1,261 @@
+.cute-pink-todo-page {
+  	width: 100%;
+  	height: 746px;
+  	position: relative;
+  	background-color: #fff;
+  	text-align: center;
+  	font-size: 48px;
+  	color: #5c2e3e;
+  	font-family: Fredoka;
+}
+.app {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	background-color: #ffe4f2;
+  	width: 1166.4px;
+  	height: 746.4px;
+  	overflow: hidden;
+}
+.container {
+  	position: absolute;
+  	top: 109.65px;
+  	left: 247.2px;
+  	width: 672px;
+  	height: 527.1px;
+}
+.container2 {
+  	position: absolute;
+  	top: 0px;
+  	left: 136.04px;
+  	width: 399.9px;
+  	height: 48px;
+}
+.icon {
+  	position: absolute;
+  	top: 8px;
+  	left: 0px;
+  	width: 32px;
+  	height: 32px;
+}
+.app2 {
+  	position: absolute;
+  	top: 0px;
+  	left: 40px;
+  	width: 319.9px;
+  	height: 48px;
+}
+.my-cute-todos {
+  	position: absolute;
+  	top: 0.2px;
+  	left: 0px;
+  	line-height: 48px;
+}
+.icon2 {
+  	position: absolute;
+  	top: 8px;
+  	left: 367.93px;
+  	width: 32px;
+  	height: 32px;
+}
+.container3 {
+  	position: absolute;
+  	top: 92px;
+  	left: 0px;
+  	box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+  	border-radius: 24px;
+  	background-color: #fff;
+  	border: 4px solid rgba(255, 105, 180, 0.2);
+  	box-sizing: border-box;
+  	width: 672px;
+  	height: 179.1px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 28px 28px 4px;
+  	text-align: left;
+  	font-size: 16px;
+  	color: rgba(92, 46, 62, 0.5);
+}
+.app3 {
+  	align-self: stretch;
+  	height: 123.1px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	gap: 16px;
+}
+.container4 {
+  	width: 616px;
+  	flex: 1;
+  	display: flex;
+  	align-items: flex-start;
+  	gap: 12px;
+}
+.text-input {
+  	height: 59.2px;
+  	flex: 1;
+  	border-radius: 26843500px;
+  	background-color: #fff5fb;
+  	border: 1.6px solid rgba(255, 105, 180, 0.2);
+  	box-sizing: border-box;
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	padding: 16px 24px;
+}
+.whats-your-next {
+  	position: relative;
+}
+.button {
+  	height: 59.2px;
+  	width: 125.1px;
+  	box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+  	border-radius: 26843500px;
+  	background-color: #ff69b4;
+  	display: flex;
+  	align-items: center;
+  	padding: 0px 32px;
+  	box-sizing: border-box;
+  	gap: 8px;
+  	text-align: center;
+  	color: #fff;
+}
+.icon3 {
+  	height: 24px;
+  	width: 24px;
+  	position: relative;
+}
+.app4 {
+  	height: 24px;
+  	flex: 1;
+  	position: relative;
+}
+.add {
+  	position: absolute;
+  	top: -0.6px;
+  	left: 0px;
+  	line-height: 24px;
+  	font-weight: 500;
+}
+.container5 {
+  	width: 616px;
+  	height: 47.9px;
+  	position: relative;
+}
+.container6 {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 302px;
+  	height: 47.9px;
+  	display: flex;
+  	align-items: center;
+  	padding: 0px 0px 0px 8px;
+  	box-sizing: border-box;
+  	gap: 8px;
+}
+.icon4 {
+  	height: 18px;
+  	width: 18px;
+  	position: relative;
+}
+.date-picker {
+  	height: 47.2px;
+  	flex: 1;
+  	position: relative;
+  	border-radius: 26843500px;
+  	background-color: #fff5fb;
+  	border: 1.6px solid rgba(255, 105, 180, 0.2);
+  	box-sizing: border-box;
+  	overflow: hidden;
+}
+.container7 {
+  	position: absolute;
+  	top: 0px;
+  	left: 314px;
+  	width: 302px;
+  	height: 47.9px;
+  	display: flex;
+  	align-items: center;
+  	padding: 0px 0px 0px 8px;
+  	box-sizing: border-box;
+  	gap: 8px;
+}
+.time-picker {
+  	height: 47.9px;
+  	flex: 1;
+  	position: relative;
+  	border-radius: 26843500px;
+  	background-color: #fff5fb;
+  	border: 1.6px solid rgba(255, 105, 180, 0.2);
+  	box-sizing: border-box;
+  	overflow: hidden;
+}
+.app5 {
+  	position: absolute;
+  	top: 295.1px;
+  	left: 0px;
+  	width: 672px;
+  	height: 232px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 54.5px 0px 0px;
+  	box-sizing: border-box;
+  	gap: 25.5px;
+  	font-size: 60px;
+}
+.container8 {
+  	align-self: stretch;
+  	height: 60px;
+  	position: relative;
+}
+.div {
+  	position: absolute;
+  	top: 0.6px;
+  	left: 305.8px;
+  	line-height: 60px;
+}
+.paragraph {
+  	align-self: stretch;
+  	height: 28px;
+  	position: relative;
+  	font-size: 18px;
+  	color: #9b6b7f;
+}
+.no-todos-yet {
+  	position: absolute;
+  	top: 0.2px;
+  	left: 178.28px;
+  	line-height: 28px;
+}
+.app-icon {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	width: 128px;
+  	height: 746.4px;
+}
+.app-icon2 {
+  	position: absolute;
+  	top: 0px;
+  	left: 1038.4px;
+  	width: 128px;
+  	height: 746.4px;
+}
+.app-icon3 {
+  	position: absolute;
+  	top: 0px;
+  	left: 135.2px;
+  	width: 896px;
+  	height: 160px;
+}
+.app-icon4 {
+  	position: absolute;
+  	top: 586.4px;
+  	left: 135.2px;
+  	width: 896px;
+  	height: 160px;
+}
+
