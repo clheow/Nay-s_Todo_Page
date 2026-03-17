@@ -169,14 +169,14 @@ function render() {
       if (dateDisplay) {
         metaHtml += `
           <span class="todo-meta-item">
-            <span class="meta-icon">📅</span>
+            <img class="meta-icon" src="images/Iconkalender.svg" alt="date">
             <span>${dateDisplay}</span>
           </span>`;
       }
       if (timeDisplay) {
         metaHtml += `
           <span class="todo-meta-item">
-            <span class="meta-icon">🕐</span>
+            <img class="meta-icon" src="images/Iconjam.svg" alt="time">
             <span>${timeDisplay}</span>
           </span>`;
       }
