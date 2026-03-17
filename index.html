@@ -1,81 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="initial-scale=1, width=device-width">
-  	
-  	<link rel="stylesheet"  href="./style.css" />
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;700&display=swap" />
-  	
-  	
-  	
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Cute Todos</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
 </head>
 <body>
-  	
-  	<div class="cute-pink-todo-page">
-    		<div class="app">
-      			<div class="container">
-        				<div class="container2">
-          					<img class="icon" alt="">
-          					
-          					<div class="app2">
-            						<b class="my-cute-todos">My Cute Todos</b>
-          					</div>
-          					<img class="icon2" alt="">
-          					
-        				</div>
-        				<div class="container3">
-          					<div class="app3">
-            						<div class="container4">
-              							<div class="text-input">
-                								<div class="whats-your-next">What's your next adventure? ✨</div>
-              							</div>
-              							<div class="button">
-                								<img class="icon3" alt="">
-                								
-                								<div class="app4">
-                  									<div class="add">Add</div>
-                								</div>
-              							</div>
-            						</div>
-            						<div class="container5">
-              							<div class="container6">
-                								<img class="icon4" alt="">
-                								
-                								<div class="date-picker">
-                								</div>
-              							</div>
-              							<div class="container7">
-                								<img class="icon4" alt="">
-                								
-                								<div class="time-picker">
-                								</div>
-              							</div>
-            						</div>
-          					</div>
-        				</div>
-        				<div class="app5">
-          					<div class="container8">
-            						<div class="div">🌸</div>
-          					</div>
-          					<div class="paragraph">
-            						<div class="no-todos-yet">No todos yet! Add one to get started ✨</div>
-          					</div>
-        				</div>
-      			</div>
-    		</div>
-    		<img class="app-icon" alt="">
-    		
-    		<img class="app-icon2" alt="">
-    		
-    		<img class="app-icon3" alt="">
-    		
-    		<img class="app-icon4" alt="">
-    		
-  	</div>
-  	
-  	
-  	
-  	
+
+  <!-- Floating background decorations -->
+  <div class="bg-decorations" aria-hidden="true">
+    <span class="deco" style="top:5%;left:4%;font-size:1.1rem;opacity:0.35">♡</span>
+    <span class="deco" style="top:8%;left:18%;font-size:0.9rem;opacity:0.3">✦</span>
+    <span class="deco" style="top:3%;left:40%;font-size:1rem;opacity:0.3">◇</span>
+    <span class="deco" style="top:6%;left:60%;font-size:0.8rem;opacity:0.35">✦</span>
+    <span class="deco" style="top:4%;left:78%;font-size:1.1rem;opacity:0.3">♡</span>
+    <span class="deco" style="top:12%;right:5%;font-size:1rem;opacity:0.3">☆</span>
+    <span class="deco" style="top:20%;left:2%;font-size:1rem;opacity:0.3">♡</span>
+    <span class="deco" style="top:28%;left:7%;font-size:0.85rem;opacity:0.28">✦</span>
+    <span class="deco" style="top:42%;left:3%;font-size:0.9rem;opacity:0.28">◇</span>
+    <span class="deco" style="top:55%;left:5%;font-size:1rem;opacity:0.3">♡</span>
+    <span class="deco" style="top:67%;left:2%;font-size:0.8rem;opacity:0.28">✦</span>
+    <span class="deco" style="top:78%;left:6%;font-size:1.1rem;opacity:0.3">☆</span>
+    <span class="deco" style="top:88%;left:4%;font-size:0.9rem;opacity:0.28">♡</span>
+    <span class="deco" style="top:18%;right:3%;font-size:1.2rem;opacity:0.3">◇</span>
+    <span class="deco" style="top:32%;right:2%;font-size:0.9rem;opacity:0.28">♡</span>
+    <span class="deco" style="top:48%;right:5%;font-size:1rem;opacity:0.3">✦</span>
+    <span class="deco" style="top:62%;right:3%;font-size:0.85rem;opacity:0.28">◇</span>
+    <span class="deco" style="top:75%;right:4%;font-size:1rem;opacity:0.3">☆</span>
+    <span class="deco" style="bottom:12%;left:22%;font-size:0.9rem;opacity:0.28">✦</span>
+    <span class="deco" style="bottom:6%;left:50%;font-size:1rem;opacity:0.3">♡</span>
+    <span class="deco" style="bottom:9%;left:72%;font-size:0.85rem;opacity:0.28">✦</span>
+  </div>
+
+  <main class="app-container">
+
+    <!-- Header -->
+    <header class="app-header">
+      <h1 class="app-title">
+        <span class="sparkle-icon">✦</span>
+        My Cute Todos
+        <span class="sparkle-icon">✦</span>
+      </h1>
+      <p class="progress-text" id="progress-text"></p>
+    </header>
+
+    <!-- Input Card -->
+    <section class="input-card">
+      <div class="input-row">
+        <input
+          type="text"
+          id="todo-input"
+          class="todo-text-input"
+          placeholder="What's your next adventure? ✨"
+          autocomplete="off"
+        />
+        <button id="add-btn" class="add-btn">
+          <span>+</span> Add
+        </button>
+      </div>
+      <div class="date-time-row">
+        <span class="dt-icon">📅</span>
+        <input type="date" id="todo-date" class="dt-input" />
+        <span class="dt-icon">🕐</span>
+        <input type="time" id="todo-time" class="dt-input" />
+      </div>
+    </section>
+
+    <!-- All Done Banner -->
+    <div class="all-done-banner hidden" id="all-done-banner">
+      🎉 <span>All Done! You're Amazing!</span>
+    </div>
+
+    <!-- Todo List -->
+    <section class="todo-list-section">
+      <div class="empty-state" id="empty-state">
+        <div class="empty-flower">🌸</div>
+        <p>No todos yet! Add one to get started ✨</p>
+      </div>
+      <ul class="todo-list" id="todo-list"></ul>
+    </section>
+
+    <!-- Footer Stats -->
+    <footer class="stats-footer hidden" id="stats-footer">
+      <span>Total: <strong id="stat-total">0</strong></span>
+      <span class="dot-sep">·</span>
+      <span>Completed: <strong id="stat-completed" class="stat-pink">0</strong></span>
+    </footer>
+
+  </main>
+
+  <script src="app.js"></script>
 </body>
 </html>
