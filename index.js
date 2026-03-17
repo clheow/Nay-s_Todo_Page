@@ -63,6 +63,9 @@ function toggleTodo(id) {
     todo.completed = !todo.completed;
     save();
     render();
+    if (todo.completed) {
+      showToast(`✨ "${todo.text}" completed!`);
+    }
   }
 }
 
@@ -94,6 +97,32 @@ function formatTime(timeStr) {
   return `${hour}:${String(m).padStart(2, '0')} ${ampm}`;
 }
 
+// ─── Toast ────────────────────────────────────
+let toastTimer = null;
+
+function showToast(msg) {
+  const toast   = document.getElementById('toast');
+  const toastMsg= document.getElementById('toast-msg');
+
+  // Clear any running hide timer
+  if (toastTimer) {
+    clearTimeout(toastTimer);
+    toast.classList.remove('hiding');
+  }
+
+  toastMsg.textContent = msg;
+  toast.classList.remove('hidden', 'hiding');
+
+  // Auto-hide after 2.5s
+  toastTimer = setTimeout(() => {
+    toast.classList.add('hiding');
+    toast.addEventListener('animationend', () => {
+      toast.classList.add('hidden');
+      toast.classList.remove('hiding');
+    }, { once: true });
+  }, 2500);
+}
+
 // ─── Render ───────────────────────────────────
 function render() {
   const total     = todos.length;
@@ -112,16 +141,11 @@ function render() {
   }
 
   // Progress text
-  if (total > 0) {
-    progressText.textContent = `${completed} of ${total} completed! 🎉`;
-  } else {
-    progressText.textContent = '';
-  }
+  progressText.textContent = total > 0 ? `${completed} of ${total} completed! 🎉` : '';
 
   // All-done banner
   if (total > 0 && completed === total) {
     allDoneBanner.classList.remove('hidden');
-    // Re-trigger animation
     allDoneBanner.style.animation = 'none';
     void allDoneBanner.offsetWidth;
     allDoneBanner.style.animation = '';
@@ -138,12 +162,26 @@ function render() {
     const dateDisplay = formatDate(todo.date);
     const timeDisplay = formatTime(todo.time);
 
-    const metaHtml = (dateDisplay || timeDisplay) ? `
-      <div class="todo-meta">
-        ${dateDisplay ? `<span>📅 ${dateDisplay}</span>` : ''}
-        ${timeDisplay ? `<span>🕐 ${timeDisplay}</span>` : ''}
-      </div>
-    ` : '';
+    // Build meta HTML — calendar icon + clock icon, matching design
+    let metaHtml = '';
+    if (dateDisplay || timeDisplay) {
+      metaHtml = `<div class="todo-meta">`;
+      if (dateDisplay) {
+        metaHtml += `
+          <span class="todo-meta-item">
+            <span class="meta-icon">📅</span>
+            <span>${dateDisplay}</span>
+          </span>`;
+      }
+      if (timeDisplay) {
+        metaHtml += `
+          <span class="todo-meta-item">
+            <span class="meta-icon">🕐</span>
+            <span>${timeDisplay}</span>
+          </span>`;
+      }
+      metaHtml += `</div>`;
+    }
 
     li.innerHTML = `
       <button class="todo-checkbox" aria-label="Toggle complete" title="Mark complete">

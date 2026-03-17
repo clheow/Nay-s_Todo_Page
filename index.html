@@ -68,19 +68,25 @@
       </div>
     </section>
 
-    <!-- All Done Banner -->
-    <div class="all-done-banner hidden" id="all-done-banner">
-      🎉 <span>All Done! You're Amazing!</span>
-    </div>
-
     <!-- Todo List -->
     <section class="todo-list-section">
+      <!-- All Done Banner (sits above list, inside section) -->
+      <div class="all-done-banner hidden" id="all-done-banner">
+        🎉 <span>All Done! You're Amazing!</span>
+      </div>
+
       <div class="empty-state" id="empty-state">
         <div class="empty-flower">🌸</div>
         <p>No todos yet! Add one to get started ✨</p>
       </div>
       <ul class="todo-list" id="todo-list"></ul>
     </section>
+
+    <!-- Completed Toast Popup -->
+    <div class="toast hidden" id="toast">
+      <span class="toast-icon">✅</span>
+      <span id="toast-msg">Todo completed!</span>
+    </div>
 
     <!-- Footer Stats -->
     <footer class="stats-footer hidden" id="stats-footer">
